@@ -38,7 +38,7 @@ import stand.CarroService;
 		
 		@POST
 		@Path("/addCarro")
-		public Response addEletro(Carro carro) {		
+		public Response addCarro(Carro carro) {		
 			Carro bookResponse = cs.updateCarro(carro.getId(),carro.getMarca(),carro.getModelo(),carro.getAno(),carro.getTipo(),carro.getCavalos(),carro.getAutonomia(),carro.getDescricao(),carro.getPrecoVenda(), null, false);
 			
 			return Response.status(Response.Status.CREATED)
@@ -72,7 +72,7 @@ import stand.CarroService;
 		
 		@GET
 		@Path("/getCarroId/{id}")
-		public Response getEletrobyId (@PathParam("id") int id) {	
+		public Response getCarroId (@PathParam("id") int id) {	
 
 					Carro c = cs.findCarro(id);
 			return Response.status(Response.Status.OK)
