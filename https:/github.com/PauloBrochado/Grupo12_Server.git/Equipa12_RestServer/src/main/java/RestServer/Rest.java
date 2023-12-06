@@ -37,7 +37,7 @@ import stand.CarroService;
 	
 		
 		@POST
-		@Path("/addEletro")
+		@Path("/addCarro")
 		public Response addEletro(Carro carro) {		
 			Carro bookResponse = cs.updateCarro(carro.getId(),carro.getMarca(),carro.getModelo(),carro.getAno(),carro.getTipo(),carro.getCavalos(),carro.getAutonomia(),carro.getDescricao(),carro.getPrecoVenda(), null, false);
 			
